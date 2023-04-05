@@ -1,11 +1,16 @@
 import React from "react";
 import nftImage from "../images/OIP.jfif";
 import getstart from "../images/getstart.png";
+
+const altText = "nft-img"; 
+
+
 const Home = () => {
+  
   return (
     <div className="w-[90%] mx-auto ">
       <div className=" mt-12">
-        <img className="h-44 w-full  rounded-lg" src={nftImage} alt="nft-img" />
+        <img className="h-44 w-full  rounded-lg" src={nftImage} alt={altText} />
       </div>
 
       {/* content info  */}

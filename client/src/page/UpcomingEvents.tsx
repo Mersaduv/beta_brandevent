@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import nftImage from "../images/OIP.jfif";
+import nftImage from "@/images/OIP.jfif";
 
 const UpcomingEvents = () => {
   return (
