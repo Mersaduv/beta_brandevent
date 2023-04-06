@@ -3,11 +3,10 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HeaderChat from "@/components/HeaderChat";
 
-
 type LayoutProps = {
   children: ReactNode;
   showHeaderFooter?: boolean;
-}
+};
 const Layout = ({ children, showHeaderFooter = false }: LayoutProps) => {
   return (
     <div className="max-w-8xl mx-auto">

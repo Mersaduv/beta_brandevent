@@ -5,15 +5,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { setUserText } from "@/state/feature/mySlice";
 import { RootState } from "@/state/store";
 
-
 const HeaderChat = () => {
   const { userText } = useSelector((state: RootState) => state);
   const dispatch = useDispatch();
   return (
     <div className="relative shadow-md">
-      {/* CHAT BOX  */}
-      {" "}
-      {/* first mobile   New step button sticky */}
+      {/* CHAT BOX  */} {/* first mobile   New step button sticky */}
       <div className=" p-2 w-full top-0 z-10 sticky flex items-center  justify-between border-b border-white bg-gray-800  text-gray-200  md:hidden">
         <div
           onClick={() => {
@@ -27,6 +24,7 @@ const HeaderChat = () => {
         </div>
         <div>New step</div>
 
+        {/* icon  */}
         <div>
           <div>
             <svg

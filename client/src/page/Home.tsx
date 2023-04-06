@@ -2,11 +2,9 @@ import React from "react";
 import nftImage from "../images/OIP.jfif";
 import getstart from "../images/getstart.png";
 
-const altText = "nft-img"; 
-
+const altText = "nft-img";
 
 const Home = () => {
-  
   return (
     <div className="w-[90%] mx-auto ">
       <div className=" mt-12">
@@ -71,11 +69,7 @@ const Home = () => {
         </div>
         <div>
           {" "}
-          <img
-            className="w-64 rounded-3xl  h-60"
-            src={getstart}
-            alt=""
-          />
+          <img className="w-64 rounded-3xl  h-60" src={getstart} alt="" />
         </div>
       </div>
     </div>

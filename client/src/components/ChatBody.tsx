@@ -1,16 +1,8 @@
-import React from "react";
 import { RiQuestionnaireFill } from "react-icons/ri";
-// import { useDispatch, useSelector } from "react-redux";
 const ChatBody = () => {
-  // const state = useSelector((state) => state);
-  // const dispatch = useDispatch();
-  // console.log(state.messageData, state);
   return (
     <div className="text-center ">
-      <div>
-        {/* talking ai  */}
-        </div>
-
+      <div>{/* talking ai  */}</div>
       <div className="mt-[75px] ">
         <div className=" text-center  mb-[55px]">
           <h1 className=" font-semibold text-xl mb-2">Chat Box</h1>

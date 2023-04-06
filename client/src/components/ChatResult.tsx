@@ -43,7 +43,9 @@ const ChatResult = () => {
       </button>
 
       {messageData.length ? (
-        <div className=" mx-4 mt-4">your name name : {messageData[0].message}</div>
+        <div className=" mx-4 mt-4">
+          your name name : {messageData[0].message}
+        </div>
       ) : (
         <h1 className="text-center">Our info</h1>
       )}
@@ -52,15 +54,3 @@ const ChatResult = () => {
 };
 
 export default ChatResult;
-
-
-  // const fetchChats = async () => {
-  //   // try {
-  //   //   const response = await axios.get("/api/chats");
-  //   //   if (response.data) {
-  //   //     setChats(response.data);
-  //   //   }
-  //   // } catch (error) {
-  //   //   console.error("Error fetching chats:", error);
-  //   // }
-  // };
