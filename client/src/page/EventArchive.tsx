@@ -1,20 +1,27 @@
-import React from "react";
-import { Link } from "react-router-dom";
+
 import nftImage from "../images/OIP.jfif";
 import mapgoogle from "../images/map.png";
 
 import { useDispatch, useSelector } from "react-redux";
 import { getData } from "@/state/feature/mySlice";
 
-const EventArchive = () => {
-  const eventsData = useSelector((state) => state);
-  const dispatch = useDispatch();
+interface EventArchiveState {
+  events: {
+    id: number;
+    title: string;
+  }[];
+  setSelected:  any;
+}
 
-  console.log(eventsData.setSelectedId);
+const EventArchive = (): JSX.Element => {
+  const { events, setSelected } = useSelector((state: EventArchiveState) => state);
+  const dispatch = useDispatch();
   return (
     <div className="w-[97%] mx-auto">
+
+      {/* events archives List */}
       <div className="w-full mt-12 mx-auto flex shadow-md   overflow-x-auto gap-x-2">
-        {eventsData.events.map((eve) => (
+        {events.map(( eve ) => (
           <div
             onClick={() => dispatch(getData(eve))}
             key={eve.id}
@@ -45,6 +52,8 @@ const EventArchive = () => {
           </div>
         ))}
       </div>
+
+
       <div className="  mt-10 ">
         <h1 className="text-2xl p-4 pt-8 font-semibold">
           Information about the event
@@ -52,7 +61,7 @@ const EventArchive = () => {
         </h1>
 
         {/* some selected  */}
-        {eventsData.setSelectedId ? (
+        {setSelected ? (
           <div className=" flex flex-col">
             <div className="flex flex-col md:flex-row justify-between gap-2">
               {/* img  */}
@@ -67,7 +76,7 @@ const EventArchive = () => {
                 {/* details :  */}
                 <div className="flex flex-col md:gap-2   min-w-[130px]">
                   <h1 className=" text-2xl  font-semibold">
-                    {eventsData.setSelectedId.title}
+                    {setSelected.title}
                   </h1>
                   <p className="text-[#D1410C] font-semibold  text-sm">
                     Week,month day, Time:00:00 AM
@@ -114,7 +123,7 @@ const EventArchive = () => {
 
               <div className="w-full  mx-auto flex shadow-md   overflow-x-auto gap-x-2">
                 <div
-                  onClick={() => dispatch(getData(eventsData.setSelectedId))}
+                  onClick={() => dispatch(getData(setSelected))}
                   className="flex -ml-2 cursor-pointer"
                 >
                   <div className="flex hover:shadow-lg    flex-row items-center  gap-3 p-2 pb-3 bg-gray-50 ">
@@ -125,7 +134,7 @@ const EventArchive = () => {
                     <div className="flex flex-col  justify-around h-full  min-w-[130px]">
                       <h1 className=" text-2xl  font-semibold">
                         {" "}
-                        {eventsData.setSelectedId.title}
+                        {setSelected.title}
                       </h1>
                       <p className="text-[#D1410C] font-semibold  text-sm">
                         Week,month day, Time:00:00 AM
@@ -145,7 +154,7 @@ const EventArchive = () => {
                 </div>
 
                 <div
-                  onClick={() => dispatch(getData(eventsData.setSelectedId))}
+                  onClick={() => dispatch(getData(setSelected))}
                   className="flex -ml-2 cursor-pointer"
                 >
                   <div className="flex hover:shadow-lg    flex-row items-center  gap-3 p-2 pb-3 bg-gray-50 ">
@@ -156,7 +165,7 @@ const EventArchive = () => {
                     <div className="flex flex-col  justify-around h-full  min-w-[130px]">
                       <h1 className=" text-2xl  font-semibold">
                         {" "}
-                        {eventsData.setSelectedId.title}
+                        {setSelected.title}
                       </h1>
                       <p className="text-[#D1410C] font-semibold  text-sm">
                         Week,month day, Time:00:00 AM
@@ -176,7 +185,7 @@ const EventArchive = () => {
                 </div>
 
                 <div
-                  onClick={() => dispatch(getData(eventsData.setSelectedId))}
+                  onClick={() => dispatch(getData(setSelected))}
                   className="flex -ml-2 cursor-pointer"
                 >
                   <div className="flex hover:shadow-lg    flex-row items-center  gap-3 p-2 pb-3 bg-gray-50 ">
@@ -187,7 +196,7 @@ const EventArchive = () => {
                     <div className="flex flex-col  justify-around h-full  min-w-[130px]">
                       <h1 className=" text-2xl  font-semibold">
                         {" "}
-                        {eventsData.setSelectedId.title}
+                        {setSelected.title}
                       </h1>
                       <p className="text-[#D1410C] font-semibold  text-sm">
                         Week,month day, Time:00:00 AM

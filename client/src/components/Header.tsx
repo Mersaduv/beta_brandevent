@@ -66,32 +66,7 @@ const Header = () => {
               Logo
             </NavLink>
           </li>
-          {/* <li>
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                isActive
-                  ? "bg-gray-100 text-xl font-bold  py-4 px-6 rounded-md"
-                  : " bg-gray-100 text-xl  py-4 px-6 rounded-md"
-              }
-            >
-              Home
-            </NavLink>
-          </li>
 
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                isActive
-                  ? "bg-gray-100 text-xl font-bold  py-4 px-6 rounded-md"
-                  : " bg-gray-100 text-xl  py-4 px-6 rounded-md"
-              }
-              to="/upcoming-events"
-            >
-              Upcoming events
-            </NavLink>
-          </li>
-*/}
           <li>
             <BiMenu className="text-3xl mr-2" />
           </li>
